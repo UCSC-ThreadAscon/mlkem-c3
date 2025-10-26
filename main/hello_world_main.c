@@ -18,6 +18,8 @@
 #include "randombytes.h"
 #include "hal.h"
 
+#include "esp_random.h"
+
 void hello_world(void)
 {
     printf("Hello world!\n");
@@ -61,6 +63,9 @@ void app_main(void)
 {
     unsigned char pk[CRYPTO_PUBLICKEYBYTES];
     unsigned char sk[CRYPTO_SECRETKEYBYTES];
+
+    esp_fill_random(pk, sizeof(pk));
+    esp_fill_random(sk, sizeof(sk));
 
     crypto_kem_keypair(pk, sk);
     return;
