@@ -16,6 +16,7 @@
 
 #include "kem.h"
 #include "randombytes.h"
+#include "hal.h"
 
 void hello_world(void)
 {
