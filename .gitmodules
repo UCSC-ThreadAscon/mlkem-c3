@@ -1,3 +1,0 @@
-[submodule "components/mlkem-embedded/mlkem-c-embedded"]
-	path = components/mlkem-embedded/mlkem-c-embedded
-	url = git@github.com:pq-code-package/mlkem-c-embedded.git

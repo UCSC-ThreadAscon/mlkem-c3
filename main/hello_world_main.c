@@ -13,7 +13,7 @@
 #include "esp_flash.h"
 #include "esp_system.h"
 
-void app_main(void)
+void hello_world(void)
 {
     printf("Hello world!\n");
 
@@ -49,4 +49,10 @@ void app_main(void)
     printf("Restarting now.\n");
     fflush(stdout);
     esp_restart();
+    return;
+}
+
+void app_main(void)
+{
+    return;
 }
