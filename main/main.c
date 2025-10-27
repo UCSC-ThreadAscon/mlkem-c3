@@ -6,6 +6,9 @@
 
 #include "main.h"
 
+#include <wolfssl/wolfcrypt/mlkem.h>
+#include <wolfssl/wolfcrypt/wc_mlkem.h>
+
 #if MLKEM_NATIVE
   #define MLK_CONFIG_API_PARAMETER_SET 512
   #define MLK_CONFIG_API_NAMESPACE_PREFIX mlkem

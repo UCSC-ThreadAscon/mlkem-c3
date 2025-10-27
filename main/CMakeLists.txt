@@ -13,7 +13,7 @@ macro(end_delimiter)
 endmacro(end_delimiter)
 
 idf_component_register(SRCS "hello_world.c" "main.c"
-                       PRIV_REQUIRES spi_flash mlkem-native
+                       PRIV_REQUIRES spi_flash mlkem-native wolfssl
                        INCLUDE_DIRS "include")
 
 # idf_component_register(SRCS "hello_world.c" "main.c"
