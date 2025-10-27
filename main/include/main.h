@@ -11,4 +11,8 @@
 #include "esp_system.h"
 #include "esp_random.h"
 
+#define MLKEM_NATIVE (CONFIG_MLKEM == 1)
+#define MLKEM_C_EMBEDDED (CONFIG_MLKEM == 2)
+#define CRYSTALS_KYBER (CONFIG_MLKEM == 4)
+
 void hello_world(void);

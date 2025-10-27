@@ -13,7 +13,8 @@ set(mlkem_native_dirs
     "mlkem-native/mlkem/src/native/riscv64"
     "mlkem-native/mlkem/src/native/riscv64/src"
     "mlkem-native/mlkem/src/native/x86_64"
-    "mlkem-native/mlkem/src/native/x86_64/src")
+    "mlkem-native/mlkem/src/native/x86_64/src"
+    "mlkem-native/test/notrandombytes")
 
 idf_component_register(
   SRC_DIRS "${mlkem_native_dirs}"

@@ -888,8 +888,7 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # ML-KEM ESP32 Tests
 #
-# default:
-CONFIG_MLKEM=0
+CONFIG_MLKEM=1
 # end of ML-KEM ESP32 Tests
 
 #

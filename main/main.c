@@ -6,21 +6,40 @@
 
 #include "main.h"
 
-#if (CONFIG_MLKEM == 1)
+#if MLKEM_NATIVE
   #define MLK_CONFIG_API_PARAMETER_SET 512
   #define MLK_CONFIG_API_NAMESPACE_PREFIX mlkem
-  #include "mlkem_native/mlkem/mlkem_native.h"
-  #include "test_only_rng/notrandombytes.h"
-#elif (CONFIG_MLKEM != 0)
+  #include "mlkem_native.h"
+
+  #define CHECK(x)                                              \
+    do                                                          \
+    {                                                           \
+      int rc;                                                   \
+      rc = (x);                                                 \
+      if (!rc)                                                  \
+      {                                                         \
+        fprintf(stderr, "ERROR (%s,%d)\n", __FILE__, __LINE__); \
+        return;                                                 \
+      }                                                         \
+    } while (0)
+#elif (MLKEM_C_EMBEDDED || CRYSTALS_KYBER)
   #include "kem.h"
-  #include "randombytes.h"
 #endif
 
 void app_main(void)
 {
+
 #if (CONFIG_MLKEM == 0)
   hello_world();
-#else
+#elif MLKEM_NATIVE
+  uint8_t pk[CRYPTO_PUBLICKEYBYTES];
+  uint8_t sk[CRYPTO_SECRETKEYBYTES];
+
+  esp_fill_random(pk, sizeof(pk));
+  esp_fill_random(sk, sizeof(sk));
+
+  CHECK(crypto_kem_keypair(pk, sk) == 0);
+#elif (MLKEM_C_EMBEDDED || CRYSTALS_KYBER)
   unsigned char pk[CRYPTO_PUBLICKEYBYTES];
   unsigned char sk[CRYPTO_SECRETKEYBYTES];
 
