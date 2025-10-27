@@ -61,12 +61,13 @@ void hello_world(void)
 
 void app_main(void)
 {
-    unsigned char pk[CRYPTO_PUBLICKEYBYTES];
-    unsigned char sk[CRYPTO_SECRETKEYBYTES];
+    // unsigned char pk[CRYPTO_PUBLICKEYBYTES];
+    // unsigned char sk[CRYPTO_SECRETKEYBYTES];
 
-    esp_fill_random(pk, sizeof(pk));
-    esp_fill_random(sk, sizeof(sk));
+    // esp_fill_random(pk, sizeof(pk));
+    // esp_fill_random(sk, sizeof(sk));
 
-    crypto_kem_keypair(pk, sk);
+    // crypto_kem_keypair(pk, sk);
+    printf("Hello world!\n");
     return;
 }
