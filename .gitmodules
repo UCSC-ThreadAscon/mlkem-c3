@@ -1,3 +1,6 @@
 [submodule "components/mlkem_embedded/mlkem-c-embedded"]
 	path = components/mlkem_embedded/mlkem-c-embedded
 	url = git@github.com:pq-code-package/mlkem-c-embedded.git
+[submodule "components/kyber/kyber"]
+	path = components/kyber/kyber
+	url = git@github.com:pq-crystals/kyber.git
