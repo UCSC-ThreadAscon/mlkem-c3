@@ -1,6 +1,6 @@
 menu "ML-KEM ESP32 Tests"
     config MLKEM
-                int 'Enable the automatic start mode.'
+        int 'The implementation of ML-KEM to use.'
         default 0
         range 0 3
         help
