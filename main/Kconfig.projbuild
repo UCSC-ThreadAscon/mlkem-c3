@@ -2,10 +2,11 @@ menu "ML-KEM ESP32 Tests"
     config MLKEM
         int 'The implementation of ML-KEM to use.'
         default 0
-        range 0 3
+        range 0 4
         help
             Set the flag to '0' to not run ML-KEM.
             Set the flag to '1' to run ML-KEM Native.
             Set the flag to '2' to run ML-KEM C Embedded.
             Set the flag to '3' to run the WolfSSL ML-KEM.
+            Set the flag to '4' to run Crystals Kyber.
 endmenu
