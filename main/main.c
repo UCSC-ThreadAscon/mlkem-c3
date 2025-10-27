@@ -6,9 +6,14 @@
 
 #include "main.h"
 
-#if (CONFIG_MLKEM != 0)
-#include "kem.h"
-#include "randombytes.h"
+#if (CONFIG_MLKEM == 1)
+  #define MLK_CONFIG_API_PARAMETER_SET 512
+  #define MLK_CONFIG_API_NAMESPACE_PREFIX mlkem
+  #include "mlkem_native/mlkem/mlkem_native.h"
+  #include "test_only_rng/notrandombytes.h"
+#elif (CONFIG_MLKEM != 0)
+  #include "kem.h"
+  #include "randombytes.h"
 #endif
 
 void app_main(void)
