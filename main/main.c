@@ -6,8 +6,10 @@
 
 #include "main.h"
 
+#if (CONFIG_MLKEM != 0)
 #include "kem.h"
 #include "randombytes.h"
+#endif
 
 void app_main(void)
 {
