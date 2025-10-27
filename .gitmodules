@@ -4,3 +4,6 @@
 [submodule "components/kyber/kyber"]
 	path = components/kyber/kyber
 	url = git@github.com:pq-crystals/kyber.git
+[submodule "components/mlkem-native/mlkem-native"]
+	path = components/mlkem-native/mlkem-native
+	url = git@github.com:pq-code-package/mlkem-native.git
