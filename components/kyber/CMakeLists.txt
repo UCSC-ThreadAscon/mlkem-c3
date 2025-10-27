@@ -1,5 +1,4 @@
-set(kyber_dirs "kyber/ref"
-               "kyber/ref/nistkat")
+set(kyber_dirs "kyber/ref")
 
-idf_component_register(SRCS "${kyber_dirs}"
-                    INCLUDE_DIRS "${kyber_dirs}")
+idf_component_register(SRC_DIRS "${kyber_dirs}"
+                       INCLUDE_DIRS "${kyber_dirs}")

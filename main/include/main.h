@@ -11,7 +11,4 @@
 #include "esp_system.h"
 #include "esp_random.h"
 
-#include "kem.h"
-#include "randombytes.h"
-
 void hello_world(void);
