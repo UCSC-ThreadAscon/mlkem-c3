@@ -1,24 +1,4 @@
-/*
- * SPDX-FileCopyrightText: 2010-2022 Espressif Systems (Shanghai) CO LTD
- *
- * SPDX-License-Identifier: CC0-1.0
- */
-
-#include <stdio.h>
-#include <string.h>
-#include <inttypes.h>
-#include "sdkconfig.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "esp_chip_info.h"
-#include "esp_flash.h"
-#include "esp_system.h"
-
-#include "kem.h"
-#include "randombytes.h"
-#include "hal.h"
-
-#include "esp_random.h"
+#include "main.h"
 
 void hello_world(void)
 {
@@ -56,18 +36,5 @@ void hello_world(void)
     printf("Restarting now.\n");
     fflush(stdout);
     esp_restart();
-    return;
-}
-
-void app_main(void)
-{
-    // unsigned char pk[CRYPTO_PUBLICKEYBYTES];
-    // unsigned char sk[CRYPTO_SECRETKEYBYTES];
-
-    // esp_fill_random(pk, sizeof(pk));
-    // esp_fill_random(sk, sizeof(sk));
-
-    // crypto_kem_keypair(pk, sk);
-    printf("Hello world!\n");
     return;
 }
