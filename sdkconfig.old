@@ -1,3 +1,7 @@
+#
+# Automatically generated file. DO NOT EDIT.
+# Espressif IoT Development Framework (ESP-IDF) 6.0.0 Project Configuration
+#
 # default:
 CONFIG_SOC_ADC_SUPPORTED=y
 # default:
@@ -884,7 +888,7 @@ CONFIG_PARTITION_TABLE_MD5=y
 #
 # ML-KEM ESP32 Tests
 #
-CONFIG_MLKEM=1
+CONFIG_MLKEM=2
 # end of ML-KEM ESP32 Tests
 
 #
